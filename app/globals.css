@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 15% 95%;
+    --foreground: 210 15% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 20%;
+    --primary: 230 70% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 15% 95%;
+    --secondary-foreground: 210 15% 20%;
+    --muted: 210 15% 95%;
+    --muted-foreground: 210 15% 40%;
+    --accent: 20 85% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 15% 85%;
+    --input: 210 15% 85%;
+    --ring: 230 70% 50%;
+    --radius: 16px;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 230 70% 50%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 20 85% 55%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 230 70% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, #3B2C7B 0%, #1E40AF 50%, #2563EB 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .card-shadow {
+    box-shadow: 0 4px 12px hsla(210, 15%, 20%, 0.08);
+  }
+}
